@@ -1,0 +1,6 @@
+[Theme]
+engine = jinja
+author = anticode.ninja
+author_url = https://anticode.ninja/
+license = MPL2
+

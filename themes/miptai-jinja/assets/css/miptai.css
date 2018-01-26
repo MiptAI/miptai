@@ -1,0 +1,164 @@
+body {
+    font-family:Roboto, sans-serif;
+}
+
+/* navbar */
+
+.navbar
+{
+    background: #F8845F;
+}
+
+.navbar .navbar-brand
+{
+    color: #fff;
+}
+
+.navbar .nav-link,
+.navbar .navbar-toggler
+{
+    color: #FFC3B0;
+    outline: none;
+    transition: 0.3s;
+}
+
+.navbar .active .nav-link,
+.navbar .nav-link:hover,
+.navbar .navbar-toggler:hover
+{
+    color: #fff;
+}
+
+/* upcoming events */
+
+.upcoming-events
+{
+    margin: 100px 0 0 0;
+}
+
+.upcoming-events p {
+    margin: 0;
+}
+
+.upcoming-events .header,
+.upcoming-events .event
+{
+    border-bottom: 2px solid #F8845F;
+}
+
+.upcoming-events .header {
+    color: #b42401;
+    padding: 20px 30px;
+}
+
+.upcoming-events .event {
+    padding: 20px 0;
+    color: #222;
+    vertical-align: middle;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.upcoming-events .event:hover {
+    background: #F8845F;
+}
+
+.upcoming-events .event-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.upcoming-events .event-date > * {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.upcoming-events .event-date .event-time {
+    color: #666;
+}
+
+.upcoming-events .event-date .day,
+.upcoming-events .event-date .separator
+{
+    font-size: 2rem;
+}
+
+.upcoming-events .event-date .separator
+{
+    width: 15px;
+}
+
+.upcoming-events .title {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.upcoming-events .description {
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.upcoming-events .more {
+    color: #fff;
+    background: #D14316;
+    padding: 4px 20px;
+    margin: 0;
+    text-align: center;
+}
+
+/* main-projects */
+
+.main-projects
+{
+    margin: 100px 0 0 0;
+}
+
+.main-projects .header {
+    color: #b42401;
+    padding: 20px 30px;
+}
+
+.main-projects .projects {
+    display: flex;
+    align-items: baseline;
+}
+
+.main-projects .projects .project,
+.main-projects .projects .project * {
+    transition: 0.5s;
+}
+
+.main-projects .projects .project {
+    color: #222;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.main-projects .projects .project .baseline {
+    display: inline-block;
+    width: 100%;
+}
+
+.main-projects .projects .project .logo {
+    width: 80%;
+}
+
+.main-projects .projects .project:hover .logo {
+    transform: scale(1.1);
+}
+
+.main-projects .projects .project .title {
+    font-size: 24px;
+}
+
+.main-projects .projects .project .description {
+    color: #666;
+}
+
+.main-projects .projects .project:hover .description {
+    color: #222;
+}

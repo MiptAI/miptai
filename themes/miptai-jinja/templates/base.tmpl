@@ -1,0 +1,105 @@
+{#  -*- coding: utf-8 -*- #}
+{% import 'base_helper.tmpl' as base with context %}
+{% import 'base_header.tmpl' as header with context %}
+{% import 'base_footer.tmpl' as footer with context %}
+{% import 'feeds_translations_helper.tmpl' as feeds_translations with context %}
+{{ set_locale(lang) }}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if title == blog_title %}
+      <title>{{ blog_title|e }}</title>
+    {% else %}
+      <title>{{ title|e }} | {{ blog_title|e }}</title>
+    {% endif %}
+    {% if description %}
+      <meta name="description" content="{{ description|e }}">
+    {% endif %}
+    <meta name="generator" content="Nikola (getnikola.com)">
+    {{ feeds_translations.head() }}
+
+    {% if use_base_tag %}
+      <base href="{{ abs_link(permalink) }}">
+    {% endif %}
+    <link rel="canonical" href="{{ abs_link(permalink) }}">
+    {% if prevlink %}
+      <link rel="prev" href="{{ prevlink }}" type="text/html">
+    {% endif %}
+    {% if nextlink %}
+      <link rel="next" href="{{ nextlink }}" type="text/html">
+    {% endif %}
+
+    <meta name="theme-color" content="#0F865F">
+
+    {% if favicons %}
+      {% for name, file, size in favicons %}
+        <link rel="{{ name }}" href="{{ file }}" sizes="{{ size }}"/>
+      {% endfor %}
+    {% endif %}
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&amp;subset=cyrillic" rel="stylesheet" >
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/css/miptai.css" rel="stylesheet">
+
+    {{ extra_head_data }}
+    {% block extra_head %}
+      {#  Leave this block alone. #}
+    {% endblock %}
+    {{ template_hooks['extra_head']() }}
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md mb-4">
+      <a class="navbar-brand" href="{{ _link("root", None) }}">{{ blog_title|e }}</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-lg fa-fw fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ _link("root", None) }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ _link("section_index", "events") }}">События</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ _link("section_index", "projects") }}">Проекты</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mt-2 mt-md-0 d-none d-lg-flex">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ VK_LINK }}"><i class="fa fa-lg fa-fw fa-vk"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../navbar/"><i class="fa fa-lg fa-fw fa-facebook"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../navbar/"><i class="fa fa-lg fa-fw fa-twitter"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../navbar/"><i class="fa fa-lg fa-fw fa-slack"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ TELEGRAM_LINK }}"><i class="fa fa-lg fa-fw fa-telegram"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ _link("rss", None) }}"><i class="fa fa-lg fa-fw fa-rss"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container" id="container">
+      {% block content %}{% endblock %}
+      {{ footer.html_footer() }}
+    </main>
+
+    <script type="text/javascript" src="/assets/js/bootstrap-native-v4.min.js"></script>
+    {{ base.late_load_js() }}
+    {% block extra_js %}{% endblock %}
+    {{ body_end }}
+    {{ template_hooks['body_end']() }}
+</body>
+</html>

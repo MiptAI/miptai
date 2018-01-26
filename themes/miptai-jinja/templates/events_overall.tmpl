@@ -1,0 +1,39 @@
+{#  -*- coding: utf-8 -*- #}
+{% if posts %}
+  <!-- Begin post-list {{ post_list_id }} -->
+  <div class="upcoming-events">
+    <div class="header row">
+      <h1>Ближайшие мероприятия</h1>
+    </div>
+    {% for post in posts %}
+      <a href="{{ post.permalink(lang) }}" class="row align-items-center event">
+        <div class="event-date col-md-3 col-lg-2">
+          <div class="event-date-start">
+            <div class="day">{{ post.meta[lang].event_start | format_date('%d') }}</div>
+            <div class="month">{{ post.meta[lang].event_start | format_date('%b') }}</div>
+          </div>
+          {% if post.meta[lang].event_start | format_date('%Y-%m-%d') == post.meta[lang].event_end | format_date('%Y-%m-%d') %}
+            <div class="separator"></div>
+            <div class="event-time">
+              <div class="time">{{ post.meta[lang].event_start | format_date('%H:%M') }}</div>
+            </div>
+          {% else %}
+            <div class="separator">-</div>
+            <div class="event-date-end">
+              <div class="day">{{ post.meta[lang].event_end | format_date('%d') }}</div>
+              <div class="month">{{ post.meta[lang].event_end | format_date('%b') }}</div>
+            </div>
+          {% endif %}
+        </div>
+        <div class="col">
+          <p class="title">{{ post.title(lang) | e }}</p>
+          <p class="description">{{ post.description(lang) | e }}</p>
+        </div>
+        <div class="col-md-3 col-lg-2">
+          <p class="more">Подробнее</p>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+  <!-- End post-list {{ post_list_id }} -->
+{% endif %}

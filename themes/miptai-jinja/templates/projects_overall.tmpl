@@ -1,0 +1,21 @@
+{#  -*- coding: utf-8 -*- #}
+{% if posts %}
+  <!-- Begin post-list {{ post_list_id }} -->
+  <div class="main-projects">
+    <div class="header row">
+      <h1>Проекты</h1>
+    </div>
+    <div class="row projects">
+      {% for post in posts %}
+        <a href="{{ post.permalink(lang) }}" class="col-sm-6 col-md-4 project">
+          <div class="baseline">
+            <img class="logo" src="/projects/{{ post.meta[lang].logo }}">
+            <p class="title">{{ post.title(lang) | e }}</p>
+          </div>
+          <p class="description">{{ post.description(lang) | e }}</p>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+  <!-- End post-list {{ post_list_id }} -->
+{% endif %}
