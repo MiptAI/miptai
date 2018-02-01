@@ -188,7 +188,7 @@ POSTS = (
     ("posts/*.rst", "posts", "post.tmpl"),
     ("events/*.rst", "events", "event.tmpl"),
     ("projects/*.rst", "projects", "project.tmpl"),
-    # ("members/*.rst", "authors", "member.tmpl"),
+    ("members/*.rst", "members", "member.tmpl"),
 )
 PAGES = (
     ("pages/*.rst", "", "story.tmpl"),
@@ -807,6 +807,7 @@ IMAGE_FOLDERS = {
     'events': 'events',
     'images': 'images',
     'projects': 'projects',
+    'members': 'members',
 }
 # IMAGE_THUMBNAIL_SIZE = 400
 # IMAGE_THUMBNAIL_FORMAT = '{name}.thumbnail{ext}'

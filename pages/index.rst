@@ -16,3 +16,9 @@
    :stop: 6
    :template: projects_overall.tmpl
    :sections: projects
+
+.. post-list::
+   :stop: 6
+   :sort: priority
+   :template: members_overall.tmpl
+   :sections: members
