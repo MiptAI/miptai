@@ -1,13 +1,9 @@
 .. title: Тестовое событие
-.. slug: test_event
 .. date: 2018-01-15 15:00:00 UTC+03:00
-.. event_start: 2018-01-28 09:00:00 UTC+03:00
-.. event_end: 2018-01-30 18:00:00 UTC+03:00
+.. event_start: 2018-02-26 09:00:00 UTC+03:00
+.. event_end: 2018-02-28 18:00:00 UTC+03:00
 .. place: Tomsk
-.. tags: tag1
-.. link: 
 .. description: Тестовое событие
-.. type: text
 
 Большой заголовок
 =================

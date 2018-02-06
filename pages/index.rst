@@ -6,11 +6,9 @@
 .. description:
 .. template: root_page.tmpl
 
-.. post-list::
-   :stop: 5
+.. upcoming-events::
+   :count: 3
    :template: events_overall.tmpl
-   :sort: event_start
-   :sections: events
 
 .. post-list::
    :stop: 6
