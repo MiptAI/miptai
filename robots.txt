@@ -1,0 +1,4 @@
+Sitemap: http://mipt.ai/sitemapindex.xml
+
+User-Agent: *
+Host: mipt.ai
