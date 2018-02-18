@@ -1,0 +1,37 @@
+language: python
+cache: apt
+sudo: false
+addons:
+  apt:
+    packages:
+    - language-pack-en-base
+    - language-pack-ru-base
+branches:
+  only:
+  - master
+python:
+- 3.6
+before_install:
+- openssl aes-256-cbc -K $encrypted_e10519042868_key -iv $encrypted_e10519042868_iv
+  -in id_rsa.enc -out id_rsa -d
+- git config --global user.name 'aithea'
+- git config --global user.email 'github@aithea.com'
+- git config --global push.default 'simple'
+- pip install --upgrade pip wheel
+- echo -e 'Host github.com\n    StrictHostKeyChecking no' >> ~/.ssh/config
+- eval "$(ssh-agent -s)"
+- chmod 600 id_rsa
+- ssh-add id_rsa
+- git remote add github-pages git@github.com:MiptAI/miptai.github.io.git
+- git branch src master
+- git branch -d master
+- git fetch github-pages master
+- git branch master FETCH_HEAD
+install:
+- pip install 'Nikola[extras]'
+script:
+- nikola build && nikola github_deploy -m 'Nikola auto deploy [ci skip]'
+notifications:
+  email:
+    on_success: change
+    on_failure: always
