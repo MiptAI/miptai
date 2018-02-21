@@ -10,31 +10,63 @@ a:hover {
   background-color: transparent;
 }
 
-/* navbar */
+/* header and footer */
 
-.navbar
+.page-header
 {
     background: #F8845F;
 }
 
-.navbar .navbar-brand
+.page-header .logo
 {
     color: #fff;
 }
 
-.navbar .nav-link,
-.navbar .navbar-toggler
+.page-header .nav-link,
+.page-header .navbar-toggler
 {
     color: #FFC3B0;
     outline: none;
     transition: 0.3s;
 }
 
-.navbar .active .nav-link,
-.navbar .nav-link:hover,
-.navbar .navbar-toggler:hover
+.page-header .active .nav-link,
+.page-header .nav-link:hover,
+.page-header .navbar-toggler:hover
 {
     color: #fff;
+}
+
+.page-footer
+{
+    background: #F8845F;
+    color: #fff;
+    padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.page-footer a
+{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.page-footer .site-source
+{
+    font-size: 12px;
+}
+
+.page-footer .social
+{
+    display: flex;
+}
+
+.page-footer .social > *
+{
+    padding: 5px;
 }
 
 /* upcoming events */
