@@ -7,46 +7,46 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>http://mipt.ai/categories/tag1.xml</loc>
-  <lastmod>2018-07-13T12:50:00Z</lastmod>
+  <lastmod>2018-07-15T12:50:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mipt.ai/en/categories/tag1.xml</loc>
-  <lastmod>2018-07-13T12:50:00Z</lastmod>
+  <lastmod>2018-07-15T12:50:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mipt.ai/en/events/rss.xml</loc>
-  <lastmod>2018-07-13T12:50:00Z</lastmod>
+  <lastmod>2018-07-15T12:50:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mipt.ai/en/members/rss.xml</loc>
-  <lastmod>2018-07-13T12:50:00Z</lastmod>
+  <lastmod>2018-07-15T12:50:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mipt.ai/en/projects/rss.xml</loc>
-  <lastmod>2018-07-13T12:50:00Z</lastmod>
+  <lastmod>2018-07-15T12:50:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mipt.ai/en/rss.xml</loc>
-  <lastmod>2018-07-13T12:50:00Z</lastmod>
+  <lastmod>2018-07-15T12:50:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mipt.ai/events/rss.xml</loc>
-  <lastmod>2018-07-13T12:50:00Z</lastmod>
+  <lastmod>2018-07-15T12:50:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mipt.ai/members/rss.xml</loc>
-  <lastmod>2018-07-13T12:50:00Z</lastmod>
+  <lastmod>2018-07-15T12:50:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mipt.ai/projects/rss.xml</loc>
-  <lastmod>2018-07-13T12:50:00Z</lastmod>
+  <lastmod>2018-07-15T12:50:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mipt.ai/rss.xml</loc>
-  <lastmod>2018-07-13T12:50:00Z</lastmod>
+  <lastmod>2018-07-15T12:50:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://mipt.ai/sitemap.xml</loc>
-  <lastmod>2018-07-13T12:50:00Z</lastmod>
+  <lastmod>2018-07-15T12:50:00Z</lastmod>
  </sitemap>
 </sitemapindex>
